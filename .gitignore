@@ -1,0 +1,12 @@
+*.pyc
+.DS_Store
+*/.DS_Store/*
+.idea
+__pycache__
+src
+*.html
+venv/
+stocks/
+rl_project.iml
+rl_project.ipr
+rl_project.iws
