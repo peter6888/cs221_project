@@ -37,3 +37,9 @@ root@d5039be03953:/usr/local/lib/python3.7/site-packages/gym/envs# cp -r ~/cs221
 root@d5039be03953:/usr/local/lib/python3.7/site-packages/gym/envs# 
 ```
 
+Run experiment
+```
+root@d5039be03953:~/cs221_project/baselines# python -m baselines.run --alg=ddpg --env=Stock-v0 --network=mlp --num_timesteps=1e4 --play
+```
+
+
