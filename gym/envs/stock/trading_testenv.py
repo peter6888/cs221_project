@@ -9,9 +9,6 @@ STOCK_CNT = 27
 UNLIMITED_BUY_SELL = False
 
 class StockTestEnv(BaseEnv):
-    def __init__(self):
-        super().__init__(0, 10000)
-
     def get_data(self):
         data = self.stock_data.get_test_daily_data()
         environ['PLAY_RUN'] = str(len(data) + 10)
