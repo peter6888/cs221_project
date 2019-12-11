@@ -38,7 +38,24 @@ docker run -i -t stock:0.3 /bin/bash
 Make modifications in dockers
 ```
 docker ps
+docker commit nice_solomon
+docker images
 docker tag 5fc540664523 stonepeter/stock:0.4
 docker push stonepeter/stock:0.4
 ```
 
+For CodaLab
+-- update the CodaLab worksheet locally --
+```
+/Users/pe.li/.local/bin/cl work 0x72938d00ba6f4d90b566641a06c59d72
+```
+-- upload codalab_sh to CodaLab --
+```
+/Users/pe.li/.local/bin/cl upload codalab_sh
+```
+-- run new experiment through https://worksheets.codalab.org/worksheets/0x72938d00ba6f4d90b566641a06c59d72 ---
+```
+dependencies:codalab_sh # the upload task
+request_docker_image:stonepeter/stock:0.6
+command:cocodalab_sh/run_full_in_container.shda
+```
