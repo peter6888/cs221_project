@@ -47,15 +47,20 @@ docker push stonepeter/stock:0.4
 For CodaLab
 -- update the CodaLab worksheet locally --
 ```
-/Users/pe.li/.local/bin/cl work 0x72938d00ba6f4d90b566641a06c59d72
+cl work 0x72938d00ba6f4d90b566641a06c59d72
 ```
 -- upload codalab_sh to CodaLab --
 ```
-/Users/pe.li/.local/bin/cl upload codalab_sh
+cl upload codalab_sh
 ```
 -- run new experiment through https://worksheets.codalab.org/worksheets/0x72938d00ba6f4d90b566641a06c59d72 ---
 ```
 dependencies:codalab_sh # the upload task
 request_docker_image:stonepeter/stock:0.6
 command:cocodalab_sh/run_full_in_container.shda
+```
+
+-- Alternative: Can run the experiment using the CLI --
+```
+cl run :codalab_sh 'codalab_sh/run_full_in_container.sh'  --request-docker-image=stonepeter/stock:0.6 --name='economic_trends_100'
 ```
