@@ -63,5 +63,6 @@ command:cocodalab_sh/run_full_in_container.shda
 -- Alternative: Can run the experiment using the CLI --
 ```
 cl upload codalab_sh
-cl run :codalab_sh 'codalab_sh/run_full_in_container.sh'  --request-docker-image=stonepeter/stock:0.6 --name='economic_validation_20'
+cl run :codalab_sh 'codalab_sh/run_full_in_container.sh'  --request-docker-image=stonepeter/stock:0.6 --name='economic_validation_50'
+cl run :codalab_sh 'codalab_sh/run_full_test_in_container.sh'  --request-docker-image=stonepeter/stock:0.6 --name='economic_validation_50'
 ```

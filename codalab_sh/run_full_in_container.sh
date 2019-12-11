@@ -1,6 +1,6 @@
 export STOCK_HOME=/root/stock/
 cd /root/cs221_project/baselines
-for (( c=1; c<=20; c++ ))
+for (( c=1; c<=50; c++ ))
 do
    echo "Run $c times"
 
