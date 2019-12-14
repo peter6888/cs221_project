@@ -117,6 +117,26 @@ def get_baseline_dji_growth(start_fund=10000, start_date=20190000, end_date=2019
         account_growth.append(total_amount)
     return account_growth
 
+def parse_result_from_codalab():
+    dct = {}
+    trpo = pd.DataFrame()
+    ppo = pd.DataFrame()
+    ddpg = pd.DataFrame()
+
+    for k,v in dct.items():
+        if k.find("final")<0:
+            # temp_pd = pd.DataFrame(v.split(","))
+            # print(len(temp_pd))
+            if k.find("ppo") >= 0:
+                ppo[len(ppo.columns)] = v.split(",")
+            elif k.find("trpo") >=0:
+                trpo[len(trpo.columns)] = v.split(",")
+            elif k.find("ddpg") >=0:
+                ddpg[len(ddpg.columns)] = v.split(",")
+
+    pd.DataFrame().count(axis=1)
+    return ppo, trpo, ddpg
+
 print("===============different Baseline in different trends of market===========")
 for start_date, end_date, name in test_ranges:
     market_values = get_baseline_dji_growth(start_date=start_date, end_date=end_date)
